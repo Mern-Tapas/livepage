@@ -1,0 +1,192 @@
+a,
+li,
+a:hover {
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+.topbar{
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+h1,
+h2,
+h3,
+h6,
+h5 {
+    margin: 0;
+}
+
+.logo>img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.college-image {
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+}
+
+.overlay {
+    background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.719), rgba(0, 0, 255, 0));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.college-image>img {
+    object-position: center;
+    height: 100%;
+}
+
+.border-down {
+    border-bottom: 1px solid black;
+}
+
+.contact-info {
+    background-color: red;
+    position: relative;
+}
+
+.contact-info>.contact-details {
+    position: absolute;
+}
+
+.footer {
+    margin-top: 10px;
+    background-color: black;
+}
+
+.contact-info-row {
+    position: relative;
+    top: -50px;
+}
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.box-card {
+    background-color: rgb(255, 255, 255);
+    height: 6rem;
+    border-radius: 0px;
+    box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.23);
+
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.kaushan {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.notification-area {
+    display: grid;
+    grid-gap: 20px;
+    /* grid-template-columns: 70% 30%; */
+}
+
+.grid-box {
+    height: 400px;
+    background: rgb(233, 233, 233);
+
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.grid-box:nth-child(1) {
+    overflow-y: scroll;
+
+}
+
+
+
+.notification .profile {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    margin: 10px;
+    border-radius: 50%;
+}
+input:focus{
+    outline: none;
+}
+
+.student-login input {
+    outline: none;
+    border: 2px solid rgba(27, 0, 0, 0);
+    transition: border 0.1s ease-in-out;
+    
+}
+.student-login input:focus{
+    
+    border: 2px solid rgb(27, 0, 0);
+}
+
+.student-login button {
+    width: 200px;
+    margin: 0 auto;
+}
+.footer-logo{
+    height: 70px;
+}
+.footer-logo img{
+    height: 100%;
+}
+
+form>a{
+    font-size: 14px;
+}
+@media (max-width:768px) {
+    .contact-info-row {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .notification-area {
+        grid-template-columns: 70% 30%;
+    }
+
+    .footer {
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+}
