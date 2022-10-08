@@ -27,6 +27,7 @@ app.get("/application",(req,res)=>{res.render("application")})
 app.get("/faculty",(req,res)=>{res.render("facultyregistration")})
 app.get("/login",(req,res)=>{res.render("login")})
 app.get("/dashboard",(req,res)=>{res.render("dashboard")})
+app.get("/studentpage",(req,res)=>{res.render("studentpage")})
 
 
 
