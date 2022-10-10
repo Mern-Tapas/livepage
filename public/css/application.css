@@ -6,17 +6,25 @@
 .notosans{
     font-family: 'Noto Sans', sans-serif;
 }
+.address{
+    grid-column: 1/4;
+}
 
 
 @media (min-width:600px){
     .application-form{
                 grid-template-columns: repeat(2,1fr);
     }
+    .form-width{
+        width: 95%;
+       }
     
 }
 @media (min-width:900px){
     .application-form{
                 grid-template-columns: repeat(3,1fr);
     }
-    
+    .form-width{
+        width: 75%;
+    }
 }

@@ -193,3 +193,13 @@ a{
     padding-left:10px ;
     min-height: 50px;
 }
+
+
+/* student page */
+
+.student-card-area{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 180px );
+    grid-template-rows: repeat(auto, 100px);
+}
