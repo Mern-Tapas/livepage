@@ -200,6 +200,13 @@ a{
 .student-card-area{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, 180px );
-    grid-template-rows: repeat(auto, 100px);
+    grid-template-columns:repeat(auto-fit, 290px);
 }
+.student-grid-card{
+    height: 400px;
+}
+@media only screen and (max-width: 600px) {
+    .student-card-area{
+        grid-template-columns: repeat(auto-fit,230px);
+    }
+  }
