@@ -6,6 +6,8 @@ const hbs = require("hbs")
 const path = require("path")
 const app = express()
 
+const { login } = require("../src/functions")
+
 const template = path.join(__dirname,"../template/view")
 const partials = path.join(__dirname,"../template/partials")
 
@@ -25,7 +27,7 @@ app.get("/about",(req,res)=>{res.render("about")})
 app.get("/contact",(req,res)=>{res.render("contact")})
 app.get("/application",(req,res)=>{res.render("application")})
 app.get("/faculty",(req,res)=>{res.render("facultyregistration")})
-app.get("/login",(req,res)=>{res.render("login")})
+app.get("/login", login)
 app.get("/dashboard",(req,res)=>{res.render("dashboard")})
 app.get("/studentpage",(req,res)=>{res.render("studentpage")})
 
