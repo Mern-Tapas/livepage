@@ -29,7 +29,7 @@ app.get("/application",(req,res)=>{res.render("application")})
 app.get("/faculty",(req,res)=>{res.render("facultyregistration")})
 app.get("/login", login)
 app.get("/dashboard",(req,res)=>{res.render("dashboard")})
-app.get("/studentpage",(req,res)=>{res.render("studentpage")})
+app.get("/studentspage",(req,res)=>{res.render("studentspage")})
 
 
 

@@ -207,6 +207,15 @@ a{
     justify-content: center;
 }
 .student-grid-card{
-    height: 350px;
+    min-height: 350px;
+    
     border-radius: 1rem;
+}
+
+.card-image-box{
+    margin-top: 15px;
+    height: 70px;
+    width: 70px;
+    background: gray;
+    border-radius: 10%;
 }
