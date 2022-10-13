@@ -61,7 +61,11 @@ a{
 .overview-grid>div:nth-child(4){
     grid-column: 1/3;
     grid-row: 3/5;
-    
+    padding: 0;
+}
+.position-fixed{
+    top: 0;
+    left: 0;
 }
 .student-image-box{
     max-height: 40px;
@@ -71,28 +75,7 @@ a{
     overflow: hidden;
     border-radius: 50px;
 }
-.student-image-box>img{
-    height: 100%;
-    width: 100%;
-}
-.student-list{
-    background-color: #EDEEF2;
-}
-.student-list button:nth-child(1){
-    background-color: #ffefc1;
-    color: #ffc30f;
-    font-weight: bold;
-}
-.student-list button:nth-child(2){
-    background-color: #ff485a70;
-    color: #ff2037;
-    font-weight: bold;
-}
-.student-list button:nth-child(3){
-    background-color: #b7e4c7;
-    color: #008f2b;
-    font-weight: bold;
-}
+
 .addmission-form-list{
     overflow-y: scroll;
 }
@@ -208,14 +191,29 @@ a{
 }
 .student-grid-card{
     min-height: 350px;
-    
     border-radius: 1rem;
+}
+img{
+    width: 100%;
 }
 
 .card-image-box{
     margin-top: 15px;
     height: 70px;
     width: 70px;
-    background: gray;
     border-radius: 10%;
+    outline: 2px solid black ;
+    outline-offset: 4px;
+    
+}
+.form-image{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.border-custom{
+    border-bottom: 1px solid rgba(194, 194, 194, 0.836);
+}
+.name-class, .admission-form-button{
+    height: 40px;
 }

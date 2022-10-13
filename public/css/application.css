@@ -1,30 +1,42 @@
-.application-form{
+.application-form {
     display: grid;
     grid-gap: 10px;
-    
+
 }
-.notosans{
+
+.notosans {
     font-family: 'Noto Sans', sans-serif;
 }
-.address{
-    grid-column: 1/4;
+
+.address {
+    grid-column: 1/2;
 }
 
 
-@media (min-width:600px){
-    .application-form{
-                grid-template-columns: repeat(2,1fr);
+@media (min-width:600px) {
+    .application-form {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .form-width{
+
+    .form-width {
         width: 95%;
-       }
-    
-}
-@media (min-width:900px){
-    .application-form{
-                grid-template-columns: repeat(3,1fr);
     }
-    .form-width{
+    .address {
+        grid-column: 1/3;
+    }
+
+  
+}
+
+@media (min-width:900px) {
+    .application-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .form-width {
         width: 75%;
+    }
+    .address {
+        grid-column: 2/4;
     }
 }
