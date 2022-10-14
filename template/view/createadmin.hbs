@@ -1,0 +1,61 @@
+{{>header}}
+<div class="row min-vh-100 py-2">
+    <div class="h-100 form-width mx-auto">
+        <h4 class="fw-bold notosans text-center py-3">Admin Register</h4>
+        <form action="/createadmin" method="post">
+            <!-- section -->
+            <h6 class="notosans text-center color-3 py-2 my-2 text-light rounded">User Details</h6>
+            <div class="application-form pb-2">
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">First Name</label>
+                    <input class="w-100 p-2 text-capitalize px-3 border border-2" placeholder="Enter your First Name"
+                        type="text" name="firstname">
+                </div>
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">Last Name</label>
+                    <input class="w-100 p-2 text-capitalize px-3 border border-2" placeholder="Enter your First Name"
+                        type="text" name="lastname">
+                </div>
+              
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">Date of Birth</label>
+                    <input class="w-100 p-2 text-uppercase px-3 border border-2" placeholder="Enter your First Name"
+                        type="date" name="dateofbirth">
+                </div>
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">E-mail</label>
+                    <input class="w-100 p-2 text-capitalize px-3 border border-2" placeholder="Enter your First Name"
+                        type="email" name="usermail">
+                </div>
+               
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">Password</label>
+                    <input class="w-100 p-2 text-capitalize px-3 border border-2" placeholder="Enter your First Name"
+                        type="password" name="password">
+                </div>
+               
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">Confirm Password</label>
+                    <input class="w-100 p-2 text-capitalize px-3 border border-2" placeholder="Enter your First Name"
+                        type="password" name="cpassword">
+                </div>
+                <div class="application-info">
+                    <label class="d-block my-1 fw-bold text-secondary" for="">Secure code</label>
+                    <input class="w-100 p-2 text-capitalize px-3 border border-2" placeholder="Enter your First Name"
+                        type="password"  name="securecode">
+                </div>
+               
+            </div>
+           
+            <div class="application-form pb-2">
+               
+            </div>
+            <!-- section -->
+            <div class="d-flex mt-auto">
+                <button class="mt-2 outline-0 border-0 poppins text-light p-2 px-5 mx-auto rounded color-2"
+                    type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{{>footer}}

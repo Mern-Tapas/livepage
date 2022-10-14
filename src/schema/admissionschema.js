@@ -9,6 +9,7 @@ const addmissionschema = new mongoose.Schema(
         mothername:String,
         dateofbirth:String,
         birthplace:String,
+        aadhaar:String,
         school:String,
         classname:String,
         tc:String,

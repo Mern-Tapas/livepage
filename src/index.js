@@ -6,7 +6,7 @@ const hbs = require("hbs")
 const path = require("path")
 const app = express()
 
-const { login , addmissionform , contact } = require("../src/functions")
+const { login , addmissionform , contact ,admin , createadmin} = require("../src/functions")
 
 const template = path.join(__dirname,"../template/view")
 const partials = path.join(__dirname,"../template/partials")
@@ -30,9 +30,13 @@ app.get("/faculty",(req,res)=>{res.render("facultyregistration")})
 app.get("/login", login)
 app.get("/dashboard",(req,res)=>{res.render("dashboard")})
 app.get("/studentspage",(req,res)=>{res.render("studentspage")})
+app.get("/admin",(req,res)=>{res.render("admin")})
+app.get("/createadmin",(req,res)=>{res.render("createadmin")})
 
 
 app.post("/application",addmissionform)
 app.post("/contact",contact)
+app.post("/admin",admin)
+app.post("/createadmin",createadmin)
 
 app.listen(process.env.PORT||4000,()=>{console.log("listening port 4000")})
