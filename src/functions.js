@@ -1,8 +1,10 @@
 const addmissionformmodel = require('../src/schema/admissionschema')
 const adminmodel = require("./schema/adminschema")
+const bcrypt = require("bcryptjs")
 
 const login = (req, res) => {
     res.render("login")
+
 }
 
 const addmissionform = async (req, res) => {
@@ -24,14 +26,29 @@ const contact = (req, res) => {
     console.log("working")
 }
 
-const admin = (req, res) => {
-    console.log(req.body.adminid)
+const admin = async(req, res) => {
+    const {email, password} = req.body
+    try {
+        const admindata = await adminmodel.findOne({email})
+        const verify = await bcrypt.compare(password, admindata.password)
+        if(verify){
+            admindata.generatetoken()
+            res.redirect("/dashboard")
+
+        }else{
+            res.render("admin",{massage:"invalid deatails"})
+        }
+        
+    } catch (error) {
+        console.log(error)  
+    }
+
 }
 const createadmin = async (req, res) => {
-    const { firstname, lastname, dateofbirth, usermail, password, cpassword, securecode } = req.body
+    const { firstname, lastname, dateofbirth, email, password, cpassword, securecode } = req.body
     if (securecode == process.env.ADMINSECRATE) {
         try {
-            const admindata = new adminmodel({ firstname, lastname, dateofbirth, usermail, password, cpassword })
+            const admindata = new adminmodel({ firstname, lastname, dateofbirth, email, password, cpassword })
             const admin = await admindata.save()
             res.send(admin)
         } catch (error) {

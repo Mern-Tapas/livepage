@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 const uniqueValidator = require('mongoose-unique-validator');
 const bcrypt = require("bcryptjs")
+const jwt = require("jsonwebtoken")
 
 
 const adminschema = new mongoose.Schema(
@@ -8,9 +9,12 @@ const adminschema = new mongoose.Schema(
         firstname: String,
         lastname: String,
         dateofbirth: String,
-        usermail: { type: String, unique: true },
+        email: { type: String, unique: true },
         password: String,
-        cpassword: String
+        cpassword: String,
+        tokens:[{
+            token:{}
+        }]
     }
 )
 
@@ -27,6 +31,10 @@ adminschema.pre("save", async function (next) {
     next()
 })
 
+
+adminschema.methods.generatetoken = function(req,res,next){
+    
+}
 const adminmodel = mongoose.model("admin-info", adminschema)
 adminschema.plugin(uniqueValidator)
 module.exports = adminmodel
