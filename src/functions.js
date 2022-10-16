@@ -26,38 +26,45 @@ const contact = (req, res) => {
     console.log("working")
 }
 
-const admin = async(req, res) => {
-    const {email, password} = req.body
+const admin = async (req, res) => {
+    const { email, password } = req.body
     try {
-        const admindata = await adminmodel.findOne({email})
+        const admindata = await adminmodel.findOne({ email })
         const verify = await bcrypt.compare(password, admindata.password)
-        if(verify){
-            admindata.generatetoken()
+        if (verify) {
+            const token = await admindata.generatetoken()
+            res.cookie("jwt", token, { maxAge: 200000 })
             res.redirect("/dashboard")
 
-        }else{
-            res.render("admin",{massage:"invalid deatails"})
+        } else {
+            res.render("admin", { massage: "invalid deatails" })
         }
-        
+
     } catch (error) {
-        console.log(error)  
+        console.log(error)
     }
 
 }
 const createadmin = async (req, res) => {
     const { firstname, lastname, dateofbirth, email, password, cpassword, securecode } = req.body
-    if (securecode == process.env.ADMINSECRATE) {
-        try {
-            const admindata = new adminmodel({ firstname, lastname, dateofbirth, email, password, cpassword })
-            const admin = await admindata.save()
-            res.send(admin)
-        } catch (error) {
-            console.log(error)
+    if (password == cpassword) {
+
+        if (securecode == process.env.ADMINSECRATE) {
+            try {
+                const admindata = new adminmodel({ firstname, lastname, dateofbirth, email, password, cpassword })
+                const admin = await admindata.save()
+                const token = await admindata.generatetoken()
+                res.cookie("jwt",token)
+                res.send("dashboard")
+            } catch (error) {
+                console.log(`error is ${error}`)
+            }
+        } else {
+            res.render("createadmin",{error:"you are not authorised person"})
         }
     }else{
-        res.send("you are not Authorised Person")
+        res.render("createadmin",{error:"Please enter both password same"})
     }
-
 }
 
 

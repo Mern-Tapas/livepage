@@ -12,8 +12,8 @@ const adminschema = new mongoose.Schema(
         email: { type: String, unique: true },
         password: String,
         cpassword: String,
-        tokens:[{
-            token:{}
+        tokens: [{
+            token: { type: String, required: true }
         }]
     }
 )
@@ -32,8 +32,17 @@ adminschema.pre("save", async function (next) {
 })
 
 
-adminschema.methods.generatetoken = function(req,res,next){
-    
+adminschema.methods.generatetoken = async function () {
+    try {
+        const token = jwt.sign({ _id: this._id.toString() }, process.env.SECRATEKEY)
+        this.tokens = this.tokens.concat({ token })
+        this.save()
+        return token
+    } catch (error) {
+        console.log(error)
+
+    }
+
 }
 const adminmodel = mongoose.model("admin-info", adminschema)
 adminschema.plugin(uniqueValidator)
