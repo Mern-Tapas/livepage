@@ -75,14 +75,18 @@
                         <div class="row p-2 py-3 m-0 border-custom">
                             <h6 class="m-0">Addmission Form</h6>
                         </div>
-                        <div class="h-75   p-0 m-0 addmission-form-list">
-                            <div class="p-2 d-flex border-custom">
+                        <div class="h-75   p-0 m-0 addmission-form-list bg">
+                            {{!-- student --}}
+                            {{#each formarray}}
+                            <div class="comment">
+                                 <div class="p-2 d-flex border-custom ">
                                 <div class="form-image overflow-hidden ">
                                     <img src="images/profile.jpg" alt="">
                                 </div>
                                 <div class="name-class ps-4">
-                                    <h6 class="m-0"> Aditya Shrivas</h6>
-                                    <p class="m-0 fs-8 fw-bold text-secondary">6 <sup class="text-secondary">th</sup></p>
+                                    <h6 class="m-0"> {{firstname }}</h6>
+                                    <p class="m-0 fs-8 fw-bold text-secondary">6 <sup class="text-secondary">th</sup>
+                                    </p>
                                 </div>
                                 <div class="data ps-4 d-none d-md-block">
                                     <h6 class="m-0 text-secondary">Cyb62614525@gmail.com</h6>
@@ -91,7 +95,11 @@
                                 <div class="ms-auto pe-3 d-flex admission-form-button">
                                     <a class="fs-8 m-auto btn btn-primary" href=""> View Details</a>
                                 </div>
+                            </div>  
                             </div>
+                            {{/each}}
+                           
+                            {{!-- student --}}
                         </div>
 
                     </div>
