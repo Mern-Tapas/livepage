@@ -46,6 +46,9 @@ app.get("/dashboard",adminauth, async (req,res)=>{
 app.get("/studentspage",(req,res)=>{res.render("studentspage")})
 app.get("/admin",logincheque,(req,res)=>{res.render("admin")})
 app.get("/createadmin",(req,res)=>{res.render("createadmin")})
+app.get("/dashboard/:id",(req,res)=>{
+    res.send("hellow")
+})
 
 
 app.post("/application",addmissionform)
