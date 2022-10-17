@@ -1,0 +1,12 @@
+
+    .about-page-gridbox{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+        justify-content: center;
+    }
+
+    .about-content{
+        height: 250px;
+        width: 250px;
+        background:yellow ;
+    }

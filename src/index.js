@@ -7,7 +7,7 @@ const path = require("path")
 const app = express()
 const cookieParser = require("cookie-parser")
 
-const { login , addmissionform , contact ,admin , createadmin} = require("../src/functions")
+const { login , addmissionform , contact ,admin , createadmin, adminlogout} = require("../src/functions")
 const { adminauth, logincheque } = require("./auth/auth")
 const addmissionformmodel = require("./schema/admissionschema")
 
@@ -46,10 +46,12 @@ app.get("/dashboard",adminauth, async (req,res)=>{
 app.get("/studentspage",(req,res)=>{res.render("studentspage")})
 app.get("/admin",logincheque,(req,res)=>{res.render("admin")})
 app.get("/createadmin",(req,res)=>{res.render("createadmin")})
-app.get("/dashboard/:id",(req,res)=>{
-    res.send("hellow")
+app.get("/dashboard/:id",async(req,res)=>{
+    const student = await addmissionformmodel.findById({_id:req.params.id})
+    res.send(student)
+    // res.send("studentdata",{student})
 })
-
+app.get("/adminlogout", adminauth, adminlogout)
 
 app.post("/application",addmissionform)
 app.post("/contact",contact)

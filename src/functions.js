@@ -32,7 +32,7 @@ const admin = async (req, res) => {
         const verify = await bcrypt.compare(password, admindata.password)
         if (verify) {
             const token = await admindata.generatetoken()
-            res.cookie("jwt", token, { maxAge: 200000 })
+            res.cookie("jwt", token)
             res.redirect("/dashboard")
 
         } else {
@@ -40,7 +40,7 @@ const admin = async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error)
+        res.render("admin",{massage:"invalid user"})
     }
 
 }
@@ -66,5 +66,17 @@ const createadmin = async (req, res) => {
     }
 }
 
+const adminlogout = async(req,res)=>{
+    try {
+        const user = req.userData
+        user.tokens = []
+        await user.save()
+        res.clearCookie("jwt")
+        res.redirect("admin")
+    } catch (error) {
+        
+    }
+}
 
-module.exports = { login, addmissionform, contact, admin, createadmin }
+
+module.exports = { login, addmissionform, contact, admin, createadmin, adminlogout }

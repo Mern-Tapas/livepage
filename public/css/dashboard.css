@@ -92,7 +92,7 @@ a{
     background: rgba(117, 59, 59, 0);
     position: absolute;
     right: 0;
-    top: 0px;
+    top: 50px;
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.05s ease-in-out;
