@@ -3,6 +3,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(510px,1fr));
         justify-items: center;
+        grid-gap: 10px;
     }
 
     .about-content{
@@ -10,3 +11,41 @@
         width: 510px;
         background:yellow ;
     }
+
+    @media screen and (max-width:600px) {
+        body{
+            background:red;
+        }
+        .about-content{
+            height: 460px;
+            width: 460px;
+            background:yellow ;
+        }
+        
+    }
+@media screen and (max-width:430px) {
+  
+    .about-page-gridbox{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        grid-gap: 5px;
+    }
+    .about-content{
+        height: 380px;
+        width: 380px;
+        background:yellow ;
+    }
+    
+}
+@media screen and (max-width:380px) {
+  
+    .about-page-gridbox{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        grid-gap: 5px;
+    }
+    .about-content{
+        height: 300px;
+        width: 300px;
+        background:yellow ;
+    }
+    
+}
