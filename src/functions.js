@@ -3,7 +3,7 @@ const adminmodel = require("./schema/adminschema")
 const bcrypt = require("bcryptjs")
 
 const login = (req, res) => {
-
+    res.send("login successfull")
 }
 
 const addmissionform = async (req, res) => {
