@@ -9,12 +9,14 @@ a:hover {
     height: 50px;
     width: 50px;
 }
-.topbar{
+
+.topbar {
     background: white;
     position: sticky;
     top: 0;
     z-index: 99;
 }
+
 h1,
 h2,
 h3,
@@ -31,6 +33,9 @@ h5 {
 
 .college-image {
     height: 450px;
+    background: url("/images/campus.jpg");
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
     position: relative;
     object-fit: cover;
@@ -129,7 +134,8 @@ h5 {
     margin: 10px;
     border-radius: 50%;
 }
-input:focus{
+
+input:focus {
     outline: none;
 }
 
@@ -137,10 +143,11 @@ input:focus{
     outline: none;
     border: 2px solid rgba(27, 0, 0, 0);
     transition: border 0.1s ease-in-out;
-    
+
 }
-.student-login input:focus{
-    
+
+.student-login input:focus {
+
     border: 2px solid rgb(27, 0, 0);
 }
 
@@ -148,15 +155,66 @@ input:focus{
     width: 200px;
     margin: 0 auto;
 }
-.footer-logo{
+
+.footer-logo {
     height: 70px;
 }
-.footer-logo img{
+
+.footer-logo img {
     height: 100%;
 }
 
-form>a{
+form>a {
     font-size: 14px;
+}
+
+
+.homepage-gridlayout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+.homepage-gridlayout-items{
+    height: 170px;
+}
+.homepage-gridlayout-items:nth-child(1),.homepage-gridlayout-items:nth-child(2),.homepage-gridlayout-items:nth-child(3){
+    background: url("/images/campus.jpg");
+    background-position: center;
+    background-size: cover  ;
+}
+.homepage-gridlayout-items:nth-child(2){
+    background: url("/images/student.jpg");
+    background-position: center;
+    background-size: cover  ;
+}
+.homepage-gridlayout-items:nth-child(2){
+    background: url("/images/student.jpg");
+    background-position: center;
+    background-size: cover  ;
+}
+.homepage-gridlayout-items:nth-child(1)>.content-box    {
+    background: rgba(235,35,88,0.9);
+}
+.homepage-gridlayout-items:nth-child(2)>.content-box{
+    background: rgba(245,140,4,0.9);
+}
+.homepage-gridlayout-items:nth-child(3) .content-box{
+    background: rgba(74,217,217,0.9);
+}
+.content-box:hover.content-box{
+    cursor: pointer;
+    transition: all ease-in 0.1s;
+    opacity: 0.85;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.grid-area{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    justify-items: center;
+    align-items: center;
 }
 @media (max-width:768px) {
     .contact-info-row {

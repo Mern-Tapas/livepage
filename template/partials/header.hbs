@@ -14,9 +14,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;500&display=swap"
         rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
     <!-- fonts -->
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
@@ -25,33 +27,32 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/fontsize.css">
+    <link rel="stylesheet" href="css/slider/splide.min.css">
 </head>
 
 <body>
-    <div class="row border-down px-2  topbar p-0 m-0 ">
-        <div class="col-6 d-flex align-items-center">
-            <div class="logo">
-                <img src="images/logo.png" alt="">
+    <div class="row  topbar p-0 m-0 ">
+        {{!-- header content --}}
+        <div class="col color-1 py-2 px-4 m-0 d-flex ">
+            <div class="logo ">
+                <img src="/images/logo.png" alt="">
             </div>
-            <h5 class="ps-2 poppins fw-bold">Star Land Academy</h5>
-        </div>
-        <div class="col-6 d-flex align-items-center justify-content-end">
-            <div>
-                <a href="/login" class="p-0  poppins  px-4 py-1 text-light color-2 fs-7  rounded">Login</a>
+            <h4 class="text-center text-light oleoscript ms-2 my-auto">Starland Academy</h4>
+            <div class="m-auto">
+                <ul class="list-inline p-0 m-0">
+                    <li class=" {{#if home }}bg-warning{{/if}} list-inline-item "><a class="text-light text-uppercase mx-2 fs-7" href="/">Home</a></li>
+                    <li class=" {{#if about }}bg-warning{{/if}} list-inline-item"><a class="text-light text-uppercase mx-2 fs-7" href="/about">About Us</a></li>
+                    <li class=" {{#if academy }}bg-warning{{/if}}  list-inline-item"><a class="text-light text-uppercase mx-2 fs-7" href="/">Academics</a></li>
+                    <li class=" {{#if application }}bg-warning{{/if}}  list-inline-item"><a class="text-light text-uppercase mx-2 fs-7" href="/application">Apply Online</a></li>
+                    <li class=" {{#if contact }}bg-warning{{/if}}  list-inline-item"><a class="text-light text-uppercase mx-2 fs-7" href="/contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class=" my-auto">
+                <a class="px-4 rounded fw-bold text-light py-2 color-2" href="/admin">Login</a>
             </div>
         </div>
+        {{!-- header content --}}
     </div>
-    <div class="container-fluid ">
-
-        <div class="row border-down">
-            <div class="col d-none d-md-flex justify-content-end align-items-center">
-                <div class="d-flex py-1 links">
-                    <a class="poppins px-3  text-secondary" href="/">Home</a>
-                    <a class="poppins px-3  text-secondary" href="application">Apply Online</a>
-                    <a class="poppins px-3  text-secondary" href="">Eligiblity</a>
-                    <a class="poppins px-3  text-secondary" href="">Academics</a>
-                    <a class="poppins px-3  text-secondary" href="/about">About Us</a>
-                    <a class="poppins px-3  text-secondary" href="/contact">Contact Us</a>
-                </div>
-            </div>
-        </div>
+    {{!-- body content start --}}
+    <div class="container-fluid  ">

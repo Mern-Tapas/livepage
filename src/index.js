@@ -27,11 +27,11 @@ app.use(cookieParser())
 
 
 
-app.get("/",(req,res)=>{res.render("home")})
-app.get("/about",(req,res)=>{res.render("about",{})})
-app.get("/contact",(req,res)=>{res.render("contact")})
-app.get("/application",(req,res)=>{res.render("application")})
-app.get("/faculty",(req,res)=>{res.render("facultyregistration")})
+app.get("/",(req,res)=>{res.render("home",{home:true})})
+app.get("/about",(req,res)=>{res.render("about",{about:true})})
+app.get("/contact",(req,res)=>{res.render("contact",{contact:true})})
+app.get("/application",(req,res)=>{res.render("application",{application:true})})
+app.get("/faculty",(req,res)=>{res.render("facultyregistration",{faculty:true})})
 app.get("/login", login)
 app.get("/dashboard",adminauth, async (req,res)=>{
     const user = req.userData
