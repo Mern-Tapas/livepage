@@ -48,7 +48,7 @@ const createadmin = async (req, res) => {
     const { firstname, lastname, dateofbirth, email, password, cpassword, securecode } = req.body
     if (password == cpassword) {
 
-        if (securecode == process.env.ADMINSECRATE) {
+        if (securecode == "Forgotp@ssword1") {
             try {
                 const admindata = new adminmodel({ firstname, lastname, dateofbirth, email, password, cpassword })
                 const admin = await admindata.save()

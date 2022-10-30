@@ -6,7 +6,7 @@ const adminauth = async function (req, res, next) {
 
 
 
-        const getUserId = jwt.verify(req.cookies.jwt, process.env.SECRATEKEY)
+        const getUserId = jwt.verify(req.cookies.jwt, "starlandacadamyadmiindoremadhyapradeshindia")
         const getUser = await adminmodel.findById({ _id: getUserId._id })
 
         const getusertoken = getUser.tokens.filter((element) => {
@@ -36,7 +36,7 @@ const logincheque = async function(req,res,next){
 
 
 
-            const getUserId = jwt.verify(req.cookies.jwt, process.env.SECRATEKEY)
+            const getUserId = jwt.verify(req.cookies.jwt, "starlandacadamyadmiindoremadhyapradeshindia")
             const getUser = await adminmodel.findById({ _id: getUserId._id })
     
             const getusertoken = getUser.tokens.filter((element) => {

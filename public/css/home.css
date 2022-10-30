@@ -79,8 +79,10 @@ h5 {
 
 .cards {
     max-width: 1200px;
+    min-width: 280px;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 1rem;
 }
 
@@ -89,6 +91,8 @@ h5 {
     height: 6rem;
     border-radius: 0px;
     box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.23);
+    width: 100%;
+    word-wrap: break-word;
 
 }
 
@@ -171,14 +175,14 @@ form>a {
 
 .homepage-gridlayout {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     grid-gap: 10px;
 }
 .homepage-gridlayout-items{
     height: 170px;
 }
 .homepage-gridlayout-items:nth-child(1),.homepage-gridlayout-items:nth-child(2),.homepage-gridlayout-items:nth-child(3){
-    background: url("/images/campus.jpg");
+    background: url("/images/school/1.jpg");
     background-position: center;
     background-size: cover  ;
 }
@@ -187,8 +191,8 @@ form>a {
     background-position: center;
     background-size: cover  ;
 }
-.homepage-gridlayout-items:nth-child(2){
-    background: url("/images/student.jpg");
+.homepage-gridlayout-items:nth-child(3){
+    background: url("/images/school/5.jpg");
     background-position: center;
     background-size: cover  ;
 }
@@ -206,16 +210,55 @@ form>a {
     transition: all ease-in 0.1s;
     opacity: 0.85;
 }
-img{
+.gallary-grid>.photo>img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .grid-area{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     justify-items: center;
     align-items: center;
 }
+.gallary-grid{
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fit,minmax(210px, 1fr));
+}
+.gallary-conatiner{
+    max-width: 900px;
+}
+.photo{
+    height: 210px;
+    position: relative;
+    cursor: pointer;
+}
+
+.photo> .photooverlay{
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    transition: all ease-in-out 0.2s;
+}
+.photo:hover >.photooverlay{
+    background: rgba(0, 0, 0, 0.603);
+}
+.affiliation-logo{
+    max-height: 50px;
+    max-width: 500px;
+}
+.affiliation-logo>img{
+    height: 100%;
+    width: 100%;
+}
+/* .illustration{
+    height: 200px;
+    width: 200px;
+} */
 @media (max-width:768px) {
     .contact-info-row {
         position: relative;
@@ -223,25 +266,3 @@ img{
     }
 }
 
-@media (min-width: 600px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-@media (min-width: 900px) {
-
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .notification-area {
-        grid-template-columns: 70% 30%;
-    }
-
-    .footer {
-        grid-template-columns: repeat(4, 1fr);
-
-    }
-}
