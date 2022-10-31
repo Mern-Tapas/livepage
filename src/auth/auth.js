@@ -28,34 +28,37 @@ const adminauth = async function (req, res, next) {
 }
 
 
-const logincheque = async function(req,res,next){
-    if(req.cookies.jwt == undefined){
+const logincheque = async function (req, res, next) {
+    if (req.cookies.jwt == undefined) {
+
         next()
-    }else{
+    } else {
         try {
 
 
 
             const getUserId = jwt.verify(req.cookies.jwt, "starlandacadamyadmiindoremadhyapradeshindia")
             const getUser = await adminmodel.findById({ _id: getUserId._id })
-    
+
             const getusertoken = getUser.tokens.filter((element) => {
                 if (element.token == req.cookies.jwt) {
                     return element.token
                 }
             })
             if (getusertoken[0].token == req.cookies.jwt) {
-                    res.redirect("/dashboard")
+                res.redirect("/dashboard")
             } else {
+                res.clearCookies("jwt")
                 console.log("error")
             }
         } catch (error) {
             console.log(`this error is${error}`)
+            res.clearCookie("jwt")
             res.redirect('/admin')
         }
-    
+
     }
-       
+
 }
 
 

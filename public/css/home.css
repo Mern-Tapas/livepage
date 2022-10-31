@@ -33,7 +33,7 @@ h5 {
 
 .college-image {
     height: 450px;
-    background: url("/images/campus.jpg");
+    background: url("/images/school/2.jpg");
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -255,10 +255,18 @@ form>a {
     height: 100%;
     width: 100%;
 }
-/* .illustration{
-    height: 200px;
-    width: 200px;
-} */
+.illustration{
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    
+}
+
+.illustration>img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 @media (max-width:768px) {
     .contact-info-row {
         position: relative;
