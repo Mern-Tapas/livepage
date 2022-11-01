@@ -29,17 +29,17 @@ app.use(cookieParser())
 
 
 
-app.get("/",(req,res)=>{res.render("home",{home:true})})
-app.get("/about",(req,res)=>{res.render("about",{about:true})})
-app.get("/contact",(req,res)=>{res.render("contact",{contact:true})})
-app.get("/application",(req,res)=>{res.render("application",{application:true})})
-app.get("/faculty",(req,res)=>{res.render("facultyregistration",{faculty:true})})
+app.get("/",(req,res)=>{res.render("home",{home:true , page:"Home"})})
+app.get("/about",(req,res)=>{res.render("about",{about:true , page:"About"})})
+app.get("/contact",(req,res)=>{res.render("contact",{contact:true , page:"Contact"})})
+app.get("/application",(req,res)=>{res.render("application",{application:true , page:"Application"})})
+app.get("/faculty",(req,res)=>{res.render("facultyregistration",{faculty:true , page:"Faculty"})})
 app.get("/login", login)
 app.get("/dashboard",adminauth, async (req,res)=>{
     const user = req.userData
     try {
         const admissionform = await addmissionformmodel.find()
-        res.render("dashboard",{data:user,formarray:admissionform})
+        res.render("dashboard",{data:user,formarray:admissionform,page:"dashboard"})
     } catch (error) {
         
     }
@@ -60,4 +60,4 @@ app.post("/contact",contact)
 app.post("/admin",admin)
 app.post("/createadmin",createadmin)
 
-app.listen(process.env.PORT||4000,()=>{console.log("listening port 4000")})
+app.listen(process.env.PORT,()=>{console.log("listening port 4000")})
