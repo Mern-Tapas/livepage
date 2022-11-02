@@ -7,149 +7,40 @@
                 <div class="col-12 pb-3">
                     <h4 class="">Student Manager</h4>
                 </div>
-              {{>useroption}}
-              {{!-- main page changable content --}}
-              <div class="row mt-5 p-2 mx-0">
-                <div class="student-card-area p-md-0 p-2">
-                    {{!-- student card start --}}
-                    <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
-                        <div class="d-flex w-100 mt-3">
-                            <div class="card-image-box mx-auto overflow-hidden  ">
-                                <img src="images/profile.jpg" alt="">
+                {{>useroption}}
+                {{!-- main page changable content --}}
+                <div class="row mt-5 p-2 mx-0">
+                    <div class="student-card-area p-md-0 p-2">
+                        {{!-- student card start --}}
+                        {{#each formarray}}
+                        <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
+                            <div class="d-flex w-100 mt-3">
+                                <div class="card-image-box mx-auto overflow-hidden  ">
+                                    <img src="images/profile.jpg" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="m-0 text-center">John</h5>
-                            <h5 class="m-0 text-center text-secondary">Abrahim</h5>
-                        </div>
-                        <div class="mt-3 d-flex">
-                            <a href="" class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view Details</a>
-                        </div>
-                        <div class="mt-3 poppins fw-bolder">
-                            <h6 class="text-center">5<sup>th</sup> Class</h6>
-                            <h6 class="text-center text-secondary">ID: 254658</h6>
-                            <h6 class="text-center text-secondary">Admission: 2020</h6>
-                        </div>
-                        
-                    </div>
-                    {{!-- student card end --}}
-                    {{!-- student card start --}}
-                    <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
-                        <div class="d-flex w-100 mt-3">
-                            <div class="card-image-box mx-auto overflow-hidden  ">
-                                <img src="images/profile.jpg" alt="">
+                            <div class="mt-4">
+                                <h5 class="m-0 text-center">{{firstname}}</h5>
+                                <h5 class="m-0 text-center text-secondary">Abrahim</h5>
                             </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="m-0 text-center">John</h5>
-                            <h5 class="m-0 text-center text-secondary">Abrahim</h5>
-                        </div>
-                        <div class="mt-3 d-flex">
-                            <a href="" class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view Details</a>
-                        </div>
-                        <div class="mt-3 poppins fw-bolder">
-                            <h6 class="text-center">5<sup>th</sup> Class</h6>
-                            <h6 class="text-center text-secondary">ID: 254658</h6>
-                            <h6 class="text-center text-secondary">Admission: 2020</h6>
-                        </div>
-                        
-                    </div>
-                    {{!-- student card end --}}
-                    {{!-- student card start --}}
-                    <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
-                        <div class="d-flex w-100 mt-3">
-                            <div class="card-image-box mx-auto overflow-hidden  ">
-                                <img src="images/profile.jpg" alt="">
+                            <div class="mt-3 d-flex">
+                                <a href=""
+                                    class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view
+                                    Details</a>
                             </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="m-0 text-center">John</h5>
-                            <h5 class="m-0 text-center text-secondary">Abrahim</h5>
-                        </div>
-                        <div class="mt-3 d-flex">
-                            <a href="" class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view Details</a>
-                        </div>
-                        <div class="mt-3 poppins fw-bolder">
-                            <h6 class="text-center">5<sup>th</sup> Class</h6>
-                            <h6 class="text-center text-secondary">ID: 254658</h6>
-                            <h6 class="text-center text-secondary">Admission: 2020</h6>
-                        </div>
-                        
-                    </div>
-                    {{!-- student card end --}}
-                    {{!-- student card start --}}
-                    <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
-                        <div class="d-flex w-100 mt-3">
-                            <div class="card-image-box mx-auto overflow-hidden  ">
-                                <img src="images/profile.jpg" alt="">
+                            <div class="mt-3 poppins fw-bolder">
+                                <h6 class="text-center">5<sup>th</sup> Class</h6>
+                                <h6 class="text-center text-secondary">ID: 254658</h6>
+                                <h6 class="text-center text-secondary">Admission: 2020</h6>
                             </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="m-0 text-center">John</h5>
-                            <h5 class="m-0 text-center text-secondary">Abrahim</h5>
-                        </div>
-                        <div class="mt-3 d-flex">
-                            <a href="" class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view Details</a>
-                        </div>
-                        <div class="mt-3 poppins fw-bolder">
-                            <h6 class="text-center">5<sup>th</sup> Class</h6>
-                            <h6 class="text-center text-secondary">ID: 254658</h6>
-                            <h6 class="text-center text-secondary">Admission: 2020</h6>
-                        </div>
-                        
-                    </div>
-                    {{!-- student card end --}}
-                    {{!-- student card start --}}
-                    <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
-                        <div class="d-flex w-100 mt-3">
-                            <div class="card-image-box mx-auto overflow-hidden  ">
-                                <img src="images/profile.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="m-0 text-center">John</h5>
-                            <h5 class="m-0 text-center text-secondary">Abrahim</h5>
-                        </div>
-                        <div class="mt-3 d-flex">
-                            <a href="" class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view Details</a>
-                        </div>
-                        <div class="mt-3 poppins fw-bolder">
-                            <h6 class="text-center">5<sup>th</sup> Class</h6>
-                            <h6 class="text-center text-secondary">ID: 254658</h6>
-                            <h6 class="text-center text-secondary">Admission: 2020</h6>
-                        </div>
-                        
-                    </div>
-                    {{!-- student card end --}}
-                    {{!-- student card start --}}
-                    <div class="custom-shadow-lg p-2 student-grid-card bg-light shadow-sm ">
-                        <div class="d-flex w-100 mt-3">
-                            <div class="card-image-box mx-auto overflow-hidden  ">
-                                <img src="images/profile.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="m-0 text-center">John</h5>
-                            <h5 class="m-0 text-center text-secondary">Abrahim</h5>
-                        </div>
-                        <div class="mt-3 d-flex">
-                            <a href="" class="rounded mx-auto text-capitalize px-3 fs-8 py-1 text-light bg-primary">view Details</a>
-                        </div>
-                        <div class="mt-3 poppins fw-bolder">
-                            <h6 class="text-center">5<sup>th</sup> Class</h6>
-                            <h6 class="text-center text-secondary">ID: 254658</h6>
-                            <h6 class="text-center text-secondary">Admission: 2020</h6>
-                        </div>
-                        
-                    </div>
-                    {{!-- student card end --}}
 
-                    
+                        </div>
+                        {{/each}}
+                    </div>
+
                 </div>
 
-              </div>
-               
-              {{!-- main page changable content --}}
+                {{!-- main page changable content --}}
 
 
-{{>dashboardFooter}}
+                {{>dashboardFooter}}

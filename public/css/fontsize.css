@@ -1,3 +1,11 @@
+a{
+    color: rgb(0, 0, 0);
+}
+a:hover{
+    color: rgb(0, 0, 0);
+}
+
+
 .fs-7{
     font-size: 16px;
 }

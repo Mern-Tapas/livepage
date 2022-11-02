@@ -1,0 +1,48 @@
+{{>sidebar}}
+{{!-- main body part starting from here --}}
+<div class="admin-panel-body">
+    <div class="box h-100 w-100 ">
+        <div class="container-fluid">
+            <div class="row w-100 m-0">
+                <div class="col-12 pb-3">
+                    <h4 class="">Setting</h4>
+                </div>
+                {{>useroption}}
+                {{!-- main page changable content --}}
+                {{!-- row start --}}
+                <div class="row  mt-5 p-2 mx-0">
+                    <div class="col student-form">
+                        <div class="">
+                            <label class="fw-bold" for="fristname">Company Name</label>
+                            <input class="px-3 w-100 p-2 rounded  mt-1" name="firstname" type="text"
+                                value="{{company}}">
+                        </div>
+                    </div>
+                </div>
+                {{!-- row end --}}
+                {{!-- row start --}}
+                <div class="row  mt-1 p-2 mx-0">
+                    <div class="col student-form">
+                        <div class="">
+                            <label class="fw-bold" for="contact">Contact</label>
+                            <input class="px-3 w-100 p-2 rounded  mt-1" name="contact" type="text" value="dupdate">
+                        </div>
+                        <div class="">
+                            <label class="fw-bold" for="email">Email</label>
+                            <input class="px-3 w-100 p-2 rounded  mt-1" name="email" type="text" value="dupdate">
+                        </div>
+                        <div class="">
+                            <label class="fw-bold" for="email">Email 2</label>
+                            <input class="px-3 w-100 p-2 rounded  mt-1" name="secondaryemail" type="text" value="dupdate">
+                        </div>
+                        <div class="">
+                            <label class="fw-bold" for="address">Address</label>
+                            <input class="px-3 w-100 p-2 rounded  mt-1" name="address" type="text" value="dupdate">
+                        </div>
+                    </div>
+                </div>
+                {{!-- row start --}}
+                {{!-- main page changable content --}}
+
+
+                {{>dashboardFooter}}

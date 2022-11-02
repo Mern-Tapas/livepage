@@ -40,7 +40,7 @@ const admin = async (req, res) => {
         }
 
     } catch (error) {
-        res.render("admin",{massage:"invalid user"})
+        res.render("admin", { massage: "invalid user" })
     }
 
 }
@@ -53,20 +53,20 @@ const createadmin = async (req, res) => {
                 const admindata = new adminmodel({ firstname, lastname, dateofbirth, email, password, cpassword })
                 const admin = await admindata.save()
                 const token = await admindata.generatetoken()
-                res.cookie("jwt",token)
+                res.cookie("jwt", token)
                 res.send("dashboard")
             } catch (error) {
                 console.log(`error is ${error}`)
             }
         } else {
-            res.render("createadmin",{error:"you are not authorised person"})
+            res.render("createadmin", { error: "you are not authorised person" })
         }
-    }else{
-        res.render("createadmin",{error:"Please enter both password same"})
+    } else {
+        res.render("createadmin", { error: "Please enter both password same" })
     }
 }
 
-const adminlogout = async(req,res)=>{
+const adminlogout = async (req, res) => {
     try {
         const user = req.userData
         user.tokens = []
@@ -74,7 +74,7 @@ const adminlogout = async(req,res)=>{
         res.clearCookie("jwt")
         res.redirect("admin")
     } catch (error) {
-        
+
     }
 }
 

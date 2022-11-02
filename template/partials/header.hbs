@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
     <!-- fonts -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/home.css">
@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/fontsize.css">
-    <link rel="stylesheet" href="css/slider/splide.min.css">
 </head>
 
 <body>
@@ -43,15 +42,37 @@
             <h4 class="text-center text-light oleoscript ms-2 my-auto">Starland Academy</h4>
             <div class="m-auto d-md-block d-none">
                 <ul class="list-inline p-0 m-0">
-                    <li class=" {{#if home }}bg-warning rounded {{/if}} list-inline-item "><a class="{{#if home}} text-dark  {{/if}} text-light text-uppercase mx-2 fs-7" href="/">Home</a></li>
-                    <li class=" {{#if about }}bg-warning rounded {{/if}} list-inline-item"><a class="{{#if about}} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7" href="/about">About Us</a></li>
-                    <li class=" {{#if academy }}bg-warning rounded {{/if}}  list-inline-item"><a class="{{#if academy}} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7" href="/">Academics</a></li>
-                    <li class=" {{#if application }}bg-warning rounded {{/if}}  list-inline-item"><a class="{{#if application}} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7" href="/application">Apply Online</a></li>
-                    <li class=" {{#if contact }}bg-warning rounded {{/if}}  list-inline-item"><a class="{{#if contact }} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7" href="/contact">Contact Us</a></li>
+                    <li class=" {{#if home }}bg-warning rounded {{/if}} list-inline-item "><a
+                            class="{{#if home}} text-dark  {{/if}} text-light text-uppercase mx-2 fs-7"
+                            href="/">Home</a></li>
+                    <li class=" {{#if about }}bg-warning rounded {{/if}} list-inline-item"><a
+                            class="{{#if about}} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7"
+                            href="/about">About Us</a></li>
+                    <li class=" {{#if academy }}bg-warning rounded {{/if}}  list-inline-item"><a
+                            class="{{#if academy}} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7"
+                            href="/">Academics</a></li>
+                    <li class=" {{#if application }}bg-warning rounded {{/if}}  list-inline-item"><a
+                            class="{{#if application}} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7"
+                            href="/application">Apply Online</a></li>
+                    <li class=" {{#if contact }}bg-warning rounded {{/if}}  list-inline-item"><a
+                            class="{{#if contact }} text-dark  {{/if}}text-light text-uppercase mx-2 fs-7"
+                            href="/contact">Contact Us</a></li>
                 </ul>
             </div>
-            <div class=" my-auto ms-auto">
+            <div class=" my-auto ms-auto d-md-block d-none">
                 <a class="px-4 rounded fw-bold text-light py-2 color-2" href="/admin">Login</a>
+            </div>
+            <div class=" my-auto ms-auto d-md-none">
+                <button id="openbutton" style="background: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-menu">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+
+                </button>
             </div>
         </div>
         {{!-- header content --}}
