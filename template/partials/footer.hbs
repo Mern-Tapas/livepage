@@ -69,8 +69,8 @@
 <div id="menubar" class="menu d-none color-1">
     <div class="row d-flex">
         <div class="ms-auto">
-            <div class="close-icon d-flex justify-content-end align-items-end">
-                <button id="closemenu" class="menu-close   bg-dark p-2">
+            <div class="close-icon d-flex justify-content-end align-items-end pt-3 pe-3">
+                <button id="closemenu" class="menu-close p-2 color-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-x">
@@ -81,17 +81,35 @@
                 </button>
             </div>
             <ul class="d-flex flex-column p-0 m-0">
-                <li class="{{#if home }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize"><a class="{{#if home}} text-dark  {{/if}} text-light  " href="/">home</a></li>
-                <li class="{{#if about }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize"><a class="{{#if about}} text-dark  {{/if}} text-light    " href="/about">About</a></li>
-                <li class="{{#if syllabus }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize"><a class="{{#if syllabus}} text-dark  {{/if}} text-light  " href="/syllabus">Syllabus</a></li>
-                <li class="{{#if contact }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize"><a class="{{#if contact}} text-dark  {{/if}} text-light    " href="/contact">Contact</a></li>
-                <li class="{{#if application }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize"><a class="{{#if application }} text-dark  {{/if}} text-light   " href="application">Apply Online</a></li>
+                <li class="{{#if home }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize"><a
+                        class="{{#if home}} text-dark  {{/if}} text-light  " href="/">home</a></li>
+                <li class="{{#if about }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize">
+                    <a class="{{#if about}} text-dark  {{/if}} text-light    " href="/about">About</a></li>
+                <li
+                    class="{{#if syllabus }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize">
+                    <a class="{{#if syllabus}} text-dark  {{/if}} text-light  " href="/syllabus">Syllabus</a></li>
+                <li
+                    class="{{#if contact }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize">
+                    <a class="{{#if contact}} text-dark  {{/if}} text-light    " href="/contact">Contact</a></li>
+                <li
+                    class="{{#if application }}bg-warning rounded {{/if}}mx-auto py-1 px-4 my-4 text-light  text-capitalize">
+                    <a class="{{#if application }} text-dark  {{/if}} text-light   " href="application">Apply Online</a>
+                </li>
             </ul>
+            <div class="d-flex mt-4">
+                <a class="px-4 m-auto rounded fw-bold text-light py-2 color-2" href="/admin">Login</a>
+            </div>
         </div>
     </div>
 </div>
-
+<div id="fullimage" class="fullimage d-flex justify-content-center align-items-center">
+    <div class="image-box">
+        <img id="imagepreview" src="" alt="">
+    </div>
+</div>
 <script src="/js/menubar.js"></script>
+<script src="/js/gallary.js"></script>
+
 </body>
 
 </html>

@@ -243,6 +243,7 @@ form>a {
     height: 100%;
     width: 100%;
     transition: all ease-in-out 0.2s;
+    pointer-events: none;
 }
 .photo:hover >.photooverlay{
     background: rgba(0, 0, 0, 0.603);

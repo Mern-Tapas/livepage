@@ -57,7 +57,7 @@ app.get("/dashboard/:id", async (req, res) => {
     res.send(student)
     // res.send("studentdata",{student})
 })
-app.get("/pageupdate",async(req,res)=>{
+app.get("/pageupdate",adminauth,async(req,res)=>{
     
     res.render("page-update")
 })
