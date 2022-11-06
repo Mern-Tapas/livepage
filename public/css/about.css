@@ -1,52 +1,19 @@
-
-    .about-page-gridbox{
-        display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(510px,1fr));
-        justify-items: center;
-        grid-gap: 10px;
-    }
-
-    .about-content{
-        width: 510px;
-        border-radius: 10px;
-        overflow: hidden;
-        /* box-shadow: 0px 10px 30px rgba(0,0,0,0.2); */
-    }
-    .imagebox-div{
-        width: 100%;
-    }
-    .about-us-content{
-        border-radius: 10px;
-    }
-
-    @media screen and (max-width:600px) {
-        .about-content{
-            height: 460px;
-            width: 460px;
-        }
-        
-    }
-@media screen and (max-width:430px) {
-  
-    .about-page-gridbox{
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-        grid-gap: 5px;
-    }
-    .about-content{
-        height: 380px;
-        width: 380px;
-    }
-    
+.grid-container-aboutus{
+    display: grid;
+    grid-gap: 15px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(450px ,1fr));
+    grid-template-rows: repeat(2,minmax(450px ,auto-fit));
 }
-@media screen and (max-width:380px) {
-  
-    .about-page-gridbox{
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-        grid-gap: 5px;
-    }
-    .about-content{
-        height: 300px;
-        width: 300px;
-    }
-    
+.grid-container-aboutus img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+.about-text{
+    min-height: fit-content ;
+}
+.about-image{
+ height: 450px;   
+ width: 450px;
 }
