@@ -41,8 +41,8 @@ h5 {
     object-fit: cover;
 }
 
-.overlay {
-    background-image: linear-gradient(15deg, rgba(0, 0, 0, 0.719), rgba(0, 0, 255, 0));
+.overlay-image {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.627), rgba(0, 0, 255, 0));
     height: 100%;
     width: 100%;
     position: absolute;
@@ -68,9 +68,7 @@ h5 {
     position: absolute;
 }
 
-.footer {
-    margin-top: 10px;
-}
+
 
 .contact-info-row {
     position: relative;
@@ -90,7 +88,7 @@ h5 {
     background-color: rgb(255, 255, 255);
     height: 6rem;
     border-radius: 0px;
-    box-shadow: 0px 10px 45px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.23);
     width: 100%;
     word-wrap: break-word;
 
@@ -107,11 +105,6 @@ h5 {
     font-family: 'Kaushan Script', cursive;
 }
 
-.notification-area {
-    display: grid;
-    grid-gap: 20px;
-    /* grid-template-columns: 70% 30%; */
-}
 
 .grid-box {
     height: 400px;
@@ -131,13 +124,6 @@ h5 {
 
 
 
-.notification .profile {
-    width: 40px;
-    height: 40px;
-    background: #000;
-    margin: 10px;
-    border-radius: 50%;
-}
 
 input:focus {
     outline: none;
@@ -226,9 +212,7 @@ form>a {
     grid-gap: 8px;
     grid-template-columns: repeat(auto-fit,minmax(210px, 1fr));
 }
-.gallary-conatiner{
-    max-width: 900px;
-}
+
 .photo{
     height: 210px;
     position: relative;
@@ -269,6 +253,25 @@ form>a {
     width: 100%;
     object-fit: cover;
 }
+
+
+.affiliation-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr ));
+    grid-gap: 20px;
+}
+.read-more{
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #05172e;
+    color: #05172e;
+}
+.read-more:hover{
+    border: 2px solid white;
+    background: #ffc107;
+    color: white;
+
+}
+
 @media (max-width:768px) {
     .contact-info-row {
         position: relative;

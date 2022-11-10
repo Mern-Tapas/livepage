@@ -113,6 +113,10 @@ a{
 .fs-small{
     font-size: 12px;
 }
+
+
+
+
 @media (min-width:600px) {
     .overview-grid{
         grid-template-columns: repeat(2, 1fr);

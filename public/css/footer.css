@@ -1,0 +1,59 @@
+
+button:focus{
+    border: none;
+    outline: none;
+}
+body a ,body a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.footer-grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    
+}
+button{
+    background: none;
+}
+.footer-icons{
+    max-height:40px;
+    max-width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 50%;
+    transition: all ease-in-out 0.2s;
+}
+.footer-icons:hover{
+    background: #ffc107;
+}
+.footer-icons .fa-brands{
+    color: gray;
+}
+.footer-icons:hover .fa-brands{
+    color: rgb(0, 0, 0);
+}
+
+.footerlogo{
+    height: 50px;
+    width: 50px;
+}
+@media only screen and (max-width: 770px) {
+    
+    .footer-grid{
+        grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+        
+        }
+    }
+@media only screen and (max-width: 770px) {
+    .footer-grid ul{
+        display: none;
+    }
+    button:focus ul{
+        height: fit-content;
+        display: block;
+    }
+  }

@@ -17,3 +17,6 @@
 .font-color-2{
     color: #2e9cdb;
 }
+.shadow-color-3{
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
