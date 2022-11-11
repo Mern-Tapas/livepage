@@ -2,7 +2,8 @@
     display: grid;
     grid-gap: 15px;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit,minmax(450px ,1fr));
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px ,1fr));
     grid-template-rows: repeat(2,minmax(450px ,auto-fit));
 }
 .grid-container-aboutus img{
@@ -14,6 +15,6 @@
     min-height: fit-content ;
 }
 .about-image{
- height: 450px;   
- width: 450px;
+ height: 250px;   
+ width: 250px;
 }
